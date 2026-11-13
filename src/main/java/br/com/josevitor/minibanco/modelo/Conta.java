@@ -3,18 +3,17 @@ package br.com.josevitor.minibanco.modelo;
 import java.math.BigDecimal;
 
 public class Conta {
-    private int numero;
+    private final String numero;
     Cliente titular;
     private BigDecimal saldo;
 
-
-
-    public int getNumero() {
-        return numero;
+    //Construtor
+    public Conta(String numero, Cliente titular, BigDecimal saldo) {
+        this.numero = numero;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public String getNumero() {
+        return numero;
     }
 
     public BigDecimal getSaldo() {
