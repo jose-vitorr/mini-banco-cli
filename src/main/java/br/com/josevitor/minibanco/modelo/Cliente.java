@@ -5,6 +5,11 @@ public class Cliente {
     private String nome;
     private String cpf;
 
+    public Cliente(int id, String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+    }
+
     public int getId() {
         return id;
     }
@@ -21,7 +26,7 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public String getCpf(){
+    public String getCpf() {
         return cpf;
     }
 
