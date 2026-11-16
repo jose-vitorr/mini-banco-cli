@@ -1,36 +1,24 @@
 package br.com.josevitor.minibanco.modelo;
 
+import java.util.Objects;
+
 public class Cliente {
-    private int id;
+    private final int id;
     private String nome;
-    private String cpf;
+    private final String cpf;
 
     public Cliente(int id, String nome, String cpf) {
-        this.nome = nome;
-        this.cpf = cpf;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
         this.id = id;
+        this.nome = Objects.requireNonNull(nome, "Nome não pode ser nulo");
+        this.cpf = Objects.requireNonNull(cpf, "CPF pode ser nulo");
     }
 
-    public String getNome() {
-        return nome;
-    }
+    public int getId() { return id; }
+    public String getNome() { return nome; }
+    public String getCpf() { return cpf; }
+    public void setNome(String nome) { this.nome = nome; }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setnome(){
+        this.nome = Objects.requireNonNull(nome, "Nome não pode ser nulo");
     }
 }
