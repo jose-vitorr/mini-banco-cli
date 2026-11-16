@@ -16,9 +16,8 @@ public class Cliente {
     public int getId() { return id; }
     public String getNome() { return nome; }
     public String getCpf() { return cpf; }
-    public void setNome(String nome) { this.nome = nome; }
 
-    public void setnome(){
+    public void setNome(String nome) {
         this.nome = Objects.requireNonNull(nome, "Nome não pode ser nulo");
     }
 }
